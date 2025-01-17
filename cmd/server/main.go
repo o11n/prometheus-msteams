@@ -70,7 +70,7 @@ func parseTeamsConfigFile(f string) (PromTeamsConfig, error) {
 }
 
 // New Webhook URL announcement: https://admin.microsoft.com/AdminPortal/Home#/MessageCenter/:/messages/MC234048
-var validWebhookPatternO365 = regexp.MustCompile(`^[a-z0-9]+\.webhook\.office\.com/webhookb2/[a-z0-9\-]+@[a-z0-9\-]+/IncomingWebhook/[a-z0-9]+/[a-z0-9\-]+$`)
+var validWebhookPatternO365 = regexp.MustCompile(`^[a-z0-9]+\.webhook\.office\.com/webhookb2/[a-z0-9\-]+@[a-z0-9\-]+/IncomingWebhook/[a-z0-9]+/[a-z0-9\-]+(/[a-zA-Z0-9\-]+)?$`)
 var validWebhookPatternWorkflow = regexp.MustCompile((`^[a-z0-9\-\.]+\.logic\.azure\.com/workflows/[\w]+/triggers/manual/paths/invoke\?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1\.0&sig=[a-zA-Z0-9\-_]+`))
 var legacyWebhookPrefix = "outlook.office.com/webhook/" // old format is only valid until 11. april '21
 
