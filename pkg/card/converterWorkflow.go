@@ -29,6 +29,10 @@ type BackgroundImage struct {
 	FillMode string `json:"fillMode,omitempty"`
 }
 
+type MSTeams struct {
+	Width string `json:"width,omitempty"`
+}
+
 type Content struct {
 	Schema          string          `json:"$schema"`
 	Type            string          `json:"type"`
@@ -36,6 +40,7 @@ type Content struct {
 	Body            []Body          `json:"body"`
 	Actions         []Action        `json:"actions,omitempty"`
 	BackgroundImage BackgroundImage `json:"backgroundImage,omitempty"`
+	MSTeams         MSTeams         `json:"msTeams,omitempty"`
 }
 
 type AdaptiveCardItem struct {
